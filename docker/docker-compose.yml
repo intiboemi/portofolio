@@ -1,0 +1,18 @@
+# ==========================================================================
+# Docker Compose - Portfolio Landing Page
+# Usage: docker compose -f docker/docker-compose.yml up -d --build
+# ==========================================================================
+
+version: "3.8"
+
+services:
+  portfolio:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: portfolio-app
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

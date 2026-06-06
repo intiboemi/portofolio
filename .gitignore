@@ -1,0 +1,71 @@
+# ==========================================================================
+# .gitignore — Portfolio Landing Page
+# ==========================================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.tox/
+.nox/
+.pep8
+.pylintrc
+.flake8
+.mypy_cache/
+.pyre/
+.typecheck/
+cython_debug/
+
+# ---------- Virtual Environment ----------
+venv/
+env/
+.venv/
+.env/
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+.directory
+
+# ---------- Docker ----------
+docker/tmp/
+.dockerignore
+
+# ---------- OS ----------
+*.log
+*.pid
+*.seed
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# ---------- Environment Variables ----------
+.env
+.env.local
+.env.production
+.env.*
+
