@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Custom Animations & Effects - Portfolio Landing Page
+   Author: Prabowo Boemi Wijaya
+   ========================================================================== */
+
+/* ---------- Global ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Navbar Blur ---------- */
+.navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---------- Typing Cursor Blink ---------- */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2em;
+    background-color: #06b6d4;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.7s step-end infinite;
+}
+
+/* ---------- Fade-In on Scroll ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Glow Button ---------- */
+@keyframes glowPulse {
+    0%   { box-shadow: 0 0 5px  rgba(6, 182, 212, 0.4),
+                       0 0 15px rgba(6, 182, 212, 0.2); }
+    50%  { box-shadow: 0 0 15px rgba(6, 182, 212, 0.6),
+                       0 0 30px rgba(6, 182, 212, 0.3); }
+    100% { box-shadow: 0 0 5px  rgba(6, 182, 212, 0.4),
+                       0 0 15px rgba(6, 182, 212, 0.2); }
+}
+
+.glow-btn {
+    animation: glowPulse 2.5s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.7),
+                0 0 40px rgba(6, 182, 212, 0.4);
+}
+
+/* ---------- Skill Card Hover ---------- */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3),
+                0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Project Card Glow ---------- */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3),
+                0 0 30px rgba(6, 182, 212, 0.15),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Floating Decoration ---------- */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ---------- Nav Link Active Indicator ---------- */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #06b6d4;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ---------- Social Icon Hover ---------- */
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.15);
+    color: #06b6d4 !important;
+}
+
+/* ---------- Section Divider Gradient ---------- */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(6, 182, 212, 0.4) 50%,
+        transparent 100%
+    );
+}
+
+/* ---------- Background Grid Pattern ---------- */
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* ---------- Scrollbar Styling (Webkit) ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
